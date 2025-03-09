@@ -149,9 +149,10 @@ const Hero = () => {
                 
             </div>
             <div className="bg">
+            <ComputerModelContainer/>
                 {/*3d*/}
                 <div className="hImg">
-                    <ComputerModelContainer/>
+                    
                 
                 </div>
             </div>

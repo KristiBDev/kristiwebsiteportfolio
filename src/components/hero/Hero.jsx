@@ -1,6 +1,7 @@
 import "./hero.css";
 import Speech from "./Speech";
 import {motion} from "motion/react";
+import ComputerModelContainer from "../services/computer/ComputerModelContainer";
 
 
 const awardVariants = {
@@ -150,8 +151,7 @@ const Hero = () => {
             <div className="bg">
                 {/*3d*/}
                 <div className="hImg">
-                    <img src="/hero.png">
-                    </img>
+                    <ComputerModelContainer/>
                 
                 </div>
             </div>

@@ -1,48 +1,27 @@
-.hero{
-    height: 100%;
-    overflow: hidden;
+.hero {
     display: flex;
-    padding:0px;
-
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+    /*background: linear-gradient(to bottom, #3e53ca, #111);*/
+    color: white;
 }
 
-.bg{
-    padding: 100px;
-    position: absolute;
-    width:100%;
-    height:100%;
-    top: 10%;
-    left: 20px;
-    z-index: 1;
-}
-
-.hImg{
-    position:absolute;
-    top:0;
-    bottom:0;
-    right: 0;
-    left: 0;
-    margin:auto;
-    width:max-content;
-}
-
-.hImg img{
-    
-
-
-}
-.hSection{
-    width: 50%;
-    height: 100%;
+/* Left Section */
+.hSection.left {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
+    align-items: flex-start;
+    position: absolute;
+    top: 5%;
 
+}
 
 
 .hTitle{
-    margin-top: 50px;
+    margin-top: 1px;
     font-size: 100px;
     color: rgb(34, 172, 160);
 
@@ -53,45 +32,120 @@
     color: white;
 
 }
+/* Typing Effect for Subtitle */
+.motionText {
+    font-size: 42px;
+    font-weight: normal;
+    color: #bdb9b9;
+    min-height: 30px;
 
-.awards{
-    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+
 }
 
-.awards p{
-    font-size: 14px;
-    color: #ddd;
-    margin: 16px 0px;
 
-}
-
-.awardList{
-    display: flex;
-    gap: 15px;
-}
-
-.awardList img {
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-    background-color: white;
-    border-radius: 100%;
-}
 
 .scroll{
     margin-bottom: 50px;
     width: max-content;
+    position:absolute;
+    
+}
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased spacing between buttons */
+    margin-top: 30px;
+    align-items: flex-start; /* Centered within the left section */
+}
+
+/* Base Button Styles */
+.ProjectsButton, .contactButton {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    width: 180px; /* Slightly larger for balance */
+}
+
+/* Softer Green - Projects Button */
+.ProjectsButton {
+    background: linear-gradient(135deg, #F61C24, #be3636); /* Muted green */
+    color: white;
+    box-shadow: 0px 3px 8px rgba(158, 57, 27, 0.2);
+}
+
+.ProjectsButton:hover {
+    background: linear-gradient(135deg,  #ED0911, #be5757);
+    transform: translateY(-2px);
+}
+
+/* Softer Blue - Contact Button */
+.contactButton {
+    background: linear-gradient(135deg, #2ba1be, #38b1a7); /* Muted blue */
+    color: white;
+    box-shadow: 0px 3px 8px rgba(70, 119, 211, 0.2);
+}
+
+.contactButton:hover {
+    background: linear-gradient(135deg, #3fa2be, #76ead3);
+    transform: translateY(-2px);
+}
+
+/* Subtle Hover Effect */
+.ProjectsButton::after, .contactButton::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: rgba(255, 255, 255, 0.15); /* Softer shine */
+    transition: all 0.4s ease-in-out;
+}
+
+.ProjectsButton:hover::after, .contactButton:hover::after {
+    left: 100%;
 }
 
 
-.hSection.right{
-    align-items: end;
+.bottom-section {
+    width: 100%;
+    height: 10px;
+    bottom:10% ;
+    position:absolute;
+    z-layer:-1;
+    left:70%;
 }
+
+
+/* Right Section */
+.hSection.right {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Follow Section */
+
+
 
 .follow{
     display:flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     padding: 16px;
     background-color: #48597a;
     border-bottom-right-radius: 10px;
@@ -124,72 +178,24 @@
     border-bottom-right-radius: 10px;
 }
 
-.bubbleContainer{
-    width:50%;
-    display:flex;
-    gap: 8px;
-    justify-content: space-between;
-}
-.bubble{
-    width:100%;
-    height: 100px;
-    background-color: white;
-    color: #555;
-    padding: 24px;
-    font-size: 18px;
-    border-radius: 20px 20px 0px 20px;     
-}
-.bubbleContainer img{
-    width:50px;
-    height:50px;
-    border-radius: 100%;
-    object-fit:cover;
-    background-color: #ff6666;
-}
-
-.certificate{
-    width:60%;
+/* Front Layer - Computer Model */
+.front-layer {
+    top: 30%;
+    left:20%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    text-align: center;
-    line-height: 24px;
-    font-weight: 300;
-    color: #ddd
-}
-
-.certificate img{
-    width:70px;
-    height:70px;
-}
-
-.contactLink{
-    margin-bottom: 50px;
-}
-.contactButton{
-    position:relative;
-}
-
-.circleText{
-    letter-spacing: 3px;
-    font-size: 20px;
-}
-
-.arrow{
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin:auto;
-    width:80px;
-    height:80px;
-    display:flex;
-    align-items:center;
     justify-content: center;
-
+    z-index: 1;
 }
+
+
+
+
+/* RESPONSIVE */
+
 
 @media (max-width:1536px){
     .hTitle{
@@ -198,7 +204,7 @@
 }
 
 @media (max-width:1280px){
-    .bg{
+    .front-layer{
         height: 60%;
         top: auto;
         bottom: 0;

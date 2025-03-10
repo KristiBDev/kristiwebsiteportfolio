@@ -5,7 +5,7 @@ import Contact from "./components/contact/Contact";
 import Hero from "./components/hero/Hero";
 import Test3d from "./components/test3d";
 
-import ComputerModelContainer from "./components/services/computer/ComputerModelContainer";
+import ComputerModelContainer from "./components/computer/ComputerModelContainer";
 const App = () => {
   return (
     <div className='container'>

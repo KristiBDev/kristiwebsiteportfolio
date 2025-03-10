@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { MeshDiscardMaterial, MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { MeshDistanceMaterial } from "three";
-import { ComputerModel } from "./services/computer/ComputerModel";
+import { ComputerModel } from "./computer/ComputerModel";
 
 const Test3d = () => {
   return (

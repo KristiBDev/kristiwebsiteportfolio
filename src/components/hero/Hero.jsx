@@ -1,56 +1,65 @@
 import "./hero.css";
+import { motion } from "motion/react";
+import ComputerModelContainer from "../computer/ComputerModelContainer";
+import { useState, useEffect } from "react";
 import Speech from "./Speech";
-import {motion} from "motion/react";
-import ComputerModelContainer from "../services/computer/ComputerModelContainer";
-
 
 const awardVariants = {
-    initial:{
-        x:-100,
-        opacity:0,
-    },
-    animate:{
-        x:0,
-        opacity:1,
-        transition:{
-            duration:1,
-            staggerChildren: 0.2,
-        }
-    }
-}
+    initial: { x: -100, opacity: 0 },
+    animate: { x: 0, opacity: 1, transition: { duration: 1, staggerChildren: 0.2 } }
+};
+
 const Hero = () => {
     return (
-        <div className ="hero">
+        <div className="hero">
+            {/* Background Layer -1 */}
             <div className="hSection left">
                 {/* TITLE */}
-                <motion.h1 initial={{y:-100, opacity: 0}} 
-                    animate= {{y:0, opacity: 1}} 
-                    transition={{duration:1}}
+                <motion.h1
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
                     className="hTitle"
                 >
                     Hello There, 
                     <br />
                     <span>I'm Kristi</span>
                 </motion.h1>
-                {/* AWARDS */}
-                <motion.div
-                    variants={awardVariants} 
-                    initial="initial"
-                    animate="animate"
-                    
-                    className="awards"
-                >
-                    <motion.h2  variants={awardVariants}  >Recent CS Graduate</motion.h2>
-                    <motion.p  variants={awardVariants}  >Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</motion.p>
-                    <motion.div  variants={awardVariants}  className="awardList">
-                        <motion.img  variants={awardVariants}  src="/award1.png" alt="" />
-                        <motion.img  variants={awardVariants}  src="/award2.png" alt="" />
-                        <motion.img  variants={awardVariants}  src="/award3.png" alt="" />
-                    </motion.div>
-                </motion.div>
+
+                {/* Subtitle with Typing Effect */}
+                <div className="motionText">
+                    <Speech />
+                </div>
+                <div className="button-container">
+                    <div className="ProjectsButton">PROJECTS</div>
+                    <div className="contactButton">CONTACT ME</div>
+                </div>
+
+                
+
+            </div>
             
-            {/*SCROLL SVG */}
-            <motion.a 
+            <div className="hSection right">
+                {/* FOLLOW SECTION - Only LinkedIn (or Instagram placeholder) */}
+                <div className="follow">
+                    <a href="/">
+                        <img src="/youtube.png" alt="" /> 
+                    </a>
+                    <div className="followTextContainer">
+                        <div className="followText">FOLLOW ME</div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Front Layer - Computer Model */}
+            <div className="front-layer">
+                <ComputerModelContainer />
+
+            </div>
+            <div className="bottom-section">
+                
+                                            {/*SCROLL SVG */}
+                <motion.a 
                 animate={{y:[0,5], opacity:[0,1,0]}}
                 transition={{
                     repeat:Infinity,
@@ -83,79 +92,12 @@ const Hero = () => {
                     strokeWidth="1"
                     strokeLinecap="round"
                     />
-                </svg>
-            </motion.a>
+                    </svg>
+                </motion.a>
+                        
+            
             </div>
-            <div className="hSection right">
-                {/*FOLLOW*/}
-                <div className="follow">
-                    <a href="/">
-                        <img src="/instagram.png" alt="" />
-                    </a>
-                    <a href="/">
-                        <img src="/facebook.png" alt="" />
-                    </a>
-                    <a href="/">
-                        <img src="/youtube.png" alt="" />
-                    </a>
-                    <div className="followTextContainer">
-                        <div className="followText">FOLLOW ME</div>
-                    </div>
-                </div>
-                {/*BUBBLE TBA */}
-                <Speech/>
-                {/*certificate*/}
-                <div className="certificate">
-                    <img src="/certificate.png" alt="" />
-                    LMA CERTIFIED
-                    <br />
-                    PROFESSIONAL
-                </div>
-                {/*contact */}
-                <a href="/#contact" className="contactLink">
-                    <div className="contactButton">
-                        <svg viewBox="0 0 200 200" width="150" height="150">
-                            <circle cx="100" cy="100" r="90" fill="pink" />
-                            <path
-                            id="innerCirclePath"
-                            fill="none"
-                            d="M 100,100 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
-                            />
-                            <text className="circleText">
-                                <textPath href="#innerCirclePath">Hire Now •</textPath>
-                            </text>
-                            <text className="circleText">
-                                <textPath href="#innerCirclePath" startOffset="44%">
-                                    Contact Me •
-                                </textPath>
-                            </text>
-                        </svg>
-                        <div className="arrow">
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            width="50"
-                            height="50"
-                            fill="none"
-                            stroke="black"
-                            strokeWidth="2"
-                            >
-                                <line x1="6" y1="18" x2="18" y2="6" />
-                                <polyline points="9 6 18 6 18 15" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                
-            </div>
-            <div className="bg">
-            <ComputerModelContainer/>
-                {/*3d*/}
-                <div className="hImg">
-                    
-                
-                </div>
-            </div>
+
         </div>
     );
 };

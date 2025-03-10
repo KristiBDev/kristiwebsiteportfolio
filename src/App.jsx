@@ -9,7 +9,7 @@ import ComputerModelContainer from "./components/computer/ComputerModelContainer
 const App = () => {
   return (
     <div className='container'>
-    <section id="#home">
+    <section id="#hero">
       <Hero/>
     </section>
     <section id="#services">

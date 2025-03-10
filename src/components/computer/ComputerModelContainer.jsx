@@ -2,6 +2,9 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { ComputerModel } from "./ComputerModel";
 import { useRef, useState } from "react";
+import { Suspense } from "react";
+
+
 
 // Paths to your 3D models (stored in /public/models)
 const models = [
@@ -11,36 +14,40 @@ const models = [
   "/html_logo.glb"
 ];
 // Component to Load and Display a 3D Model
+
+
 const ModelComponent = ({ modelPath, scale }) => {
   const { scene } = useGLTF(modelPath);
-  return <primitive object={scene} scale={0.003} />;
+  return (
+    <Suspense fallback={null}> {/* Prevents rendering before model loads */}
+      <primitive object={scene} scale={0.003} />
+    </Suspense>
+  );
 };
 
 // Orbiting 3D Models with Unique Motion
 const OrbitingObject = ({ index }) => {
   const objectRef = useRef();
-  const [speed] = useState(0.08 + Math.random() * 0.3); // Randomized speed
-  const [radius] = useState(1.2 + Math.random() * 1); // Unique orbit radius
-  const [offset] = useState(Math.random() * Math.PI * 2); // Random starting position
-  const [verticalOffset] = useState(index % 2 === 0 ? 0.3 : -0.3); // Some move higher/lower
+
+  // Define a fixed speed for all objects
+  const speed = 0.2; // Constant speed
+  const radius = 1.5 + index * 0.5; // Evenly spaced orbits
+  const offset = (index * Math.PI) / 2; // Spread out initial positions
+  const verticalOffset = index % 2 === 0 ? 0.3 : -0.3; // Some go slightly higher/lower
 
   useFrame(({ clock }) => {
     if (objectRef.current) {
       const t = clock.getElapsedTime() * speed + offset;
-      
-      // Dynamic movement changes over time
-      const dynamicRadius = radius + Math.sin(clock.getElapsedTime() * (0.3 + index * 0.1)) * 0.4;
-      const verticalMovement = Math.sin(t * (1.5 + index * 0.2)) * (0.5 + verticalOffset);
 
-      objectRef.current.position.set(
-        Math.cos(t) * dynamicRadius,
-        verticalMovement + 1.5, // Moves models higher
-        Math.sin(t) * dynamicRadius
-      );
+      // Circular motion around the center (X-Z plane)
+      const x = Math.cos(t) * radius;
+      const z = Math.sin(t) * radius;
 
-      objectRef.current.rotation.y += 0.005;
-      objectRef.current.rotation.z += 0.005;
-      objectRef.current.rotation.x += 0.005;
+      // Smooth up/down motion
+      const y = 1.5 + Math.sin(t * 1.2) * 0.3 + verticalOffset;
+
+      objectRef.current.position.set(x, y, z);
+      objectRef.current.rotation.y += 0.01; // Slight rotation for natural look
     }
   });
 
@@ -51,10 +58,11 @@ const OrbitingObject = ({ index }) => {
   );
 };
 
+
 // Canvas for the Computer Model
 const ComputerModelCanvas = () => {
   return (
-    <Canvas camera={{ position: [0, 2, 5], fov: 75 }} style={{ position: "absolute", top: 0, left: 0, zIndex: 2 }}>
+    <Canvas camera={{ position: [0, 2, 5], fov: 60 }} style={{ position: "absolute", top: 250, left: 200, zIndex: 2 }}>
       <ambientLight intensity={1.5} />
       <directionalLight position={[2, 5, 5]} intensity={1.2} />
 
@@ -62,7 +70,7 @@ const ComputerModelCanvas = () => {
       <ComputerModel scale={10} rotation={[0, 2, 0]} />
 
       {/* Camera Controls */}
-      <OrbitControls enableZoom={true} minDistance={4} maxDistance={10} target={[0, 0, 0]} />
+      <OrbitControls enableZoom={false} minDistance={4} maxDistance={10} target={[0, 0, 0]} />
     </Canvas>
   );
 };

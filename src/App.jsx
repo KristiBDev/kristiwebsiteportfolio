@@ -12,6 +12,12 @@ const App = () => {
       <section id="Portfolio">
         <Portfolio />
       </section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section> {/* empty sections for projects scroll snap */}
+      
+
       <section id="Contact">
         <Contact />
       </section>

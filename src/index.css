@@ -36,12 +36,7 @@ section{
     height:100vh;
     scroll-snap-align: center;
 }
-section:nth-child(2){
-    background-color: #1a27e4;
-}
-section:nth-child(3){
-    background-color: #3c5dca;
-}
+
 
 
 @media (min-width:640px){

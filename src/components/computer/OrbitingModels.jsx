@@ -15,13 +15,13 @@ const models = [
 // Component to Load and Display a 3D Model
 const ModelComponent = ({ modelPath, scale }) => {
   const { scene } = useGLTF(modelPath);
-  let modelScale = 0.003; // default scale
+  let modelScale = 0.005; // default scale
   
   // Specific model scaling
   if (modelPath.includes('github')) {
-    modelScale = 0.3;
+    modelScale = 0.09;
   } else if (modelPath.includes('js_logo')) {
-    modelScale = 1; // increased JS scale (0.006 * 5)
+    modelScale = 0.8; // increased JS scale (0.006 * 5)
   } else if (modelPath.includes('html_logo')) {
     modelScale = 0.0009;
   }
@@ -37,7 +37,7 @@ const ModelComponent = ({ modelPath, scale }) => {
 const OrbitingObject = ({ index, scale = 1 }) => {
   const objectRef = useRef();
 
-  const speed = 0.2;
+  const speed = 0.7;
   // Adjust radius based on model type
   const isJs = models[index].includes('js_logo');
   const isVertical = index === 2 || index === 4; // HTML and GitHub logos will orbit vertically

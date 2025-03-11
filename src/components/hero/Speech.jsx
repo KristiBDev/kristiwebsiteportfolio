@@ -13,10 +13,13 @@ const Speech = () => {
             1000,
             "<Recent CS Graduate>",
             1000,
-            "<Tech Enthusiast> ",
+            "<Tech Enthusiast>",
             1000,
-            "<Tech Enthusiast >",
+            "<IT Intern>",
             1000,
+            "<Problem Solver>",
+            1000,
+          
           ]}
           wrapper="span"
           speed={40}

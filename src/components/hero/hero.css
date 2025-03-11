@@ -16,21 +16,17 @@
     align-items: flex-start;
     position: absolute;
     top: 5%;
-
+    z-index: 10;
 }
-
 
 .hTitle{
     margin-top: 1px;
     font-size: 100px;
     color: #00a8e8;
-
 }
-
 
 .hTitle span{
     color: white;
-
 }
 /* Typing Effect for Subtitle */
 .motionText {
@@ -38,27 +34,24 @@
     font-weight: normal;
     color: #b4c5e4;
     min-height: 30px;
-
     white-space: nowrap;
     overflow: hidden;
-
 }
-
-
 
 .scroll{
     margin-bottom: 50px;
     width: max-content;
     position:absolute;
-    
 }
 /* Button Container */
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Increased spacing between buttons */
+    gap: 15px;
     margin-top: 30px;
-    align-items: flex-start; /* Centered within the left section */
+    align-items: flex-start;
+    position: relative;
+    z-index: 1000;
 }
 
 /* Base Button Styles */
@@ -74,7 +67,9 @@
     position: relative;
     overflow: hidden;
     border: none;
-    width: 180px; /* Slightly larger for balance */
+    width: 180px;
+    z-index: 1000;
+    pointer-events: auto;
 }
 
 /* Softer Green - Projects Button */
@@ -117,7 +112,6 @@
     left: 100%;
 }
 
-
 .bottom-section {
     position: absolute;
     bottom: 5%;
@@ -125,7 +119,6 @@
     transform: translateX(-50%);
     z-index: 3;
 }
-
 
 /* Right Section */
 .hSection.right {
@@ -138,9 +131,6 @@
 }
 
 /* Follow Section */
-
-
-
 .follow{
     display:flex;
     flex-direction: column;
@@ -148,19 +138,16 @@
     padding: 16px;
     background-color: #48597a;
     border-bottom-right-radius: 10px;
-
 }
 
 .follow img{
     width: 20px;
     height: 20px;
-
 }
 
 .followTextContainer{
     width:20px;
     height:20px;
-
 }
 
 .followText{
@@ -189,13 +176,10 @@
     justify-content: center;
     z-index: 1;
     overflow: hidden;
+    pointer-events: none;
 }
 
-
-
 /* RESPONSIVE */
-
-
 @media (max-width:1536px){
     .hTitle{
         font-size:72px;
@@ -223,7 +207,6 @@
     }
 }
 
-
 @media (max-width:1024px){
     .front-layer{
         height: 65vh;
@@ -235,7 +218,6 @@
         font-family: 72px;
     }
 }
-
 
 @media (max-width:768px){
     .hero{

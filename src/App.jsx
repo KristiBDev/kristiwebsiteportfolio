@@ -1,35 +1,22 @@
-
-import Services from "./components/services/Services";
+import Hero from "./components/hero/Hero";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
-import Hero from "./components/hero/Hero";
-import Test3d from "./components/test3d";
 
 import ComputerModelContainer from "./components/computer/ComputerModelContainer";
 const App = () => {
   return (
-    <div className='container'>
-    <section id="#hero">
-      <Hero/>
-    </section>
-    <section id="#services">
-      <Services />
-    </section>
-    <section id="#portfolio">
-      <Portfolio />
-    </section>
-    <section id="#contact">
-      <Contact />
-    </section> 
-    </div> 
-
-    //<Test3d />
-    
-    
-    
-   
-    
+    <div>
+      <section id="Homepage">
+        <Hero />
+      </section>
+      <section id="Portfolio">
+        <Portfolio />
+      </section>
+      <section id="Contact">
+        <Contact />
+      </section>
+    </div>
   );
 };
 
-export default App  
+export default App;  

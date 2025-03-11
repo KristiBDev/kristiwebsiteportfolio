@@ -1,4 +1,3 @@
-
 .hero {
     display: flex;
     justify-content: space-between;
@@ -24,7 +23,7 @@
 .hTitle{
     margin-top: 1px;
     font-size: 100px;
-    color: rgb(34, 172, 160);
+    color: #00a8e8;
 
 }
 
@@ -37,7 +36,7 @@
 .motionText {
     font-size: 42px;
     font-weight: normal;
-    color: #bdb9b9;
+    color: #b4c5e4;
     min-height: 30px;
 
     white-space: nowrap;
@@ -92,13 +91,13 @@
 
 /* Softer Blue - Contact Button */
 .contactButton {
-    background: linear-gradient(135deg, #2ba1be, #38b1a7); /* Muted blue */
+    background: linear-gradient(135deg, #2ba1be, #00a8e8); /* Muted blue */
     color: white;
     box-shadow: 0px 3px 8px rgba(70, 119, 211, 0.2);
 }
 
 .contactButton:hover {
-    background: linear-gradient(135deg, #3fa2be, #76ead3);
+    background: linear-gradient(135deg, #3fa2be, #00a8e8);
     transform: translateY(-2px);
 }
 
@@ -120,12 +119,11 @@
 
 
 .bottom-section {
-    
-    height: 10px;
-    bottom:10% ;
-    position:absolute;
-    z-layer:-1;
-    left:70%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
 }
 
 
@@ -182,16 +180,15 @@
 /* Front Layer - Computer Model */
 .front-layer {
     position: absolute;
-    top: 50%; /* Centering instead of pushing too far */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Ensures it stays within viewport */
     width: 100%;
-    height: 100vh; /* Restricting it to viewport height */
+    height: 85vh;
+    bottom: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    overflow: hidden; /* Prevents child content from overflowing */
+    overflow: hidden;
 }
 
 
@@ -203,13 +200,14 @@
     .hTitle{
         font-size:72px;
     }
+    .front-layer {
+        height: 80vh;
+    }
 }
 
 @media (max-width:1280px){
     .front-layer{
-        height: 60%;
-        top: auto;
-        bottom: 0;
+        height: 75vh;
     }
     .hImg{
         height: 100%;
@@ -227,6 +225,9 @@
 
 
 @media (max-width:1024px){
+    .front-layer{
+        height: 65vh;
+    }
     .bg{
         height: 50%;
     }
@@ -262,11 +263,18 @@
     .awardList{
         justify-content: center;
     }
-    .follow, .bubbleContainer, .certificate{
+    .bubbleContainer{
+        transform: scale(0.6);
+        display: block !important;
+    }
+    .follow, .certificate{
         display: none;
     }
     .hSection.right{
         justify-content: end;
+    }
+    .front-layer{
+        height: 55vh;
     }
 }
 

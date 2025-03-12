@@ -45,7 +45,7 @@ const OrbitingObject = ({ index, scale = 1 }) => {
   const speed = 0.7;
   // Adjust radius based on model type
   const isJs = models[index].includes('js_logo');
-  const isVertical = index === 2 || index === 4; // HTML and GitHub logos will orbit vertically
+  const isVertical = index === 2 || index === 4; // 2 logos will orbit vertically
   const baseRadius = isJs ? 0.8 : 1.2;
   const radius = (baseRadius + (index % 3) * 0.6) * scale;
   
@@ -58,14 +58,14 @@ const OrbitingObject = ({ index, scale = 1 }) => {
       
       // Vertical orbit for selected models
       if (isVertical) {
-        const x = 2 + Math.sin(t * 0.5) * radius; // Added offset of 2 units to the right
-        const z = 3.5 + Math.cos(t * 0.5) * (radius * 0.3); // Kept same depth
+        const x = 2 + Math.sin(t * 0.5) * radius; 
+        const z = 3.5 + Math.cos(t * 0.5) * (radius * 0.3); 
         const y = (1.2 + Math.sin(t * 1.5) * 0.8 + verticalOffset) * scale;
         objectRef.current.position.set(x, y, z);
       } else {
         // Regular horizontal orbit for other models
-        const x = 2 + Math.cos(t) * radius; // Added offset of 2 units to the right
-        const z = 3.5 + Math.sin(t) * (radius * 0.3); // Kept same depth
+        const x = 2 + Math.cos(t) * radius;
+        const z = 3.5 + Math.sin(t) * (radius * 0.3); 
         const baseHeight = isJs ? 0.8 : 1.2;
         const y = (baseHeight + Math.sin(t * 1.2) * 0.2 + verticalOffset) * scale;
         objectRef.current.position.set(x, y, z);

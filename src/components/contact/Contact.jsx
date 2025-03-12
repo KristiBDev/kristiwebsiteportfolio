@@ -91,7 +91,11 @@ const Contact = () => {
           {error && <span>Something went wrong!</span>}
         </motion.form>
       </div>
-      
+      {/* gif container placeholder 
+      <div className="gif-container">
+      <img src="/contact_gif.gif" alt="Contact" />
+      </div>
+      */}
     </div>
   );
 };

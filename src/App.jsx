@@ -3,6 +3,8 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 
 import ComputerModelContainer from "./components/computer/ComputerModelContainer";
+
+
 const App = () => {
   return (
     <div>

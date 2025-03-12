@@ -8,15 +8,15 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio1.png" alt="3D Portfolio" />
+              <img src="/portfolio1.png" alt="Project 1" />
             </div>
             <div className="portfolio-text">
-              <h2>3D Portfolio Website</h2>
-              <p>Interactive portfolio featuring Three.js 3D models, smooth animations, and responsive design.</p>
+              <h2>Project One</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <div className="portfolio-tools">
-                <span>React</span>
-                <span>Three.js</span>
-                <span>Framer Motion</span>
+                <span>Skill 1</span>
+                <span>Skill 2</span>
+                <span>Skill 3</span>
               </div>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>
@@ -26,15 +26,15 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio2.png" alt="AI Generator" />
+              <img src="/portfolio2.png" alt="Project 2" />
             </div>
             <div className="portfolio-text">
-              <h2>AI Image Generator</h2>
-              <p>Full-stack application that generates unique images using AI with authentication and sharing features.</p>
+              <h2>Project Two</h2>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               <div className="portfolio-tools">
-                <span>Next.js</span>
-                <span>OpenAI</span>
-                <span>MongoDB</span>
+                <span>Skill 4</span>
+                <span>Skill 5</span>
+                <span>Skill 6</span>
               </div>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>
@@ -44,15 +44,15 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/myscreen.png" alt="Chat App" />
+              <img src="/myscreen.png" alt="Project 3" />
             </div>
             <div className="portfolio-text">
-              <h2>Real-time Chat App</h2>
-              <p>Feature-rich chat application with real-time messaging, file sharing, and video calls.</p>
+              <h2>Project Three</h2>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
               <div className="portfolio-tools">
-                <span>React</span>
-                <span>Socket.io</span>
-                <span>Firebase</span>
+                <span>Skill 7</span>
+                <span>Skill 8</span>
+                <span>Skill 9</span>
               </div>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>
@@ -62,15 +62,15 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio4.png" alt="E-commerce" />
+              <img src="/portfolio4.png" alt="Project 4" />
             </div>
             <div className="portfolio-text">
-              <h2>E-commerce Platform</h2>
-              <p>Modern e-commerce platform with product management, cart functionality, and secure payments.</p>
+              <h2>Project Four</h2>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <div className="portfolio-tools">
-                <span>Next.js</span>
-                <span>Stripe</span>
-                <span>PostgreSQL</span>
+                <span>Skill 10</span>
+                <span>Skill 11</span>
+                <span>Skill 12</span>
               </div>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>
@@ -80,15 +80,15 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio5.png" alt="Task Manager" />
+              <img src="/portfolio5.png" alt="Project 5" />
             </div>
             <div className="portfolio-text">
-              <h2>Task Management System</h2>
-              <p>Collaborative task management system with real-time updates and team features.</p>
+              <h2>Project Five</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
               <div className="portfolio-tools">
-                <span>React</span>
-                <span>Redux</span>
-                <span>Node.js</span>
+                <span>Skill 13</span>
+                <span>Skill 14</span>
+                <span>Skill 15</span>
               </div>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>

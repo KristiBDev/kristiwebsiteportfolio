@@ -40,10 +40,10 @@ const Hero = () => {
             </div>
             
             <div className="hSection right">
-                {/* FOLLOW SECTION - Only LinkedIn (or Instagram placeholder) */}
+                {/* FOLLOW SECTION -*/}
                 <div className="follow">
-                    <a href="/">
-                        <img src="/youtube.png" alt="" /> 
+                    <a href="linkedin">
+                        <img src="/linkedin_icon.png" alt="" /> 
                     </a>
                     <div className="followTextContainer">
                         <div className="followText">FOLLOW ME</div>

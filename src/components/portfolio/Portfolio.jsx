@@ -44,7 +44,7 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio3.png" alt="Chat App" />
+              <img src="/myscreen.png" alt="Chat App" />
             </div>
             <div className="portfolio-text">
               <h2>Real-time Chat App</h2>

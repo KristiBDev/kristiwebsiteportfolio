@@ -177,7 +177,9 @@
     z-index: 1;
     overflow: hidden;
     pointer-events: none;
+    
 }
+
 
 /* RESPONSIVE */
 @media (max-width:1536px){

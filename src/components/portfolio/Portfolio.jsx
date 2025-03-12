@@ -8,7 +8,7 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="./src/portfolio1.png" alt="Project 1" />
+              <img src="./p2.png" alt="Project 1" />
             </div>
             <div className="portfolio-text">
               <h2>Project One</h2>
@@ -26,7 +26,8 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="./src/portfolio2.png" alt="Project 2" />
+            <img src={`${import.meta.env.BASE_URL}p2.png`} alt="Project 2" />
+
             </div>
             <div className="portfolio-text">
               <h2>Project Two</h2>
@@ -44,7 +45,8 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="./src/myscreen.png" alt="Project 3" />
+            <img src={`${import.meta.env.BASE_URL}myscreen.png`} alt="Project 3" />
+
             </div>
             <div className="portfolio-text">
               <h2>Project Three</h2>
@@ -80,7 +82,7 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="./src/portfolio5.png" alt="Project 5" />
+              <img src="./portfolio5.png" alt="Project 5" />
             </div>
             <div className="portfolio-text">
               <h2>Project Five</h2>

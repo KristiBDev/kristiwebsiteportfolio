@@ -43,7 +43,7 @@ const Hero = () => {
                 {/* FOLLOW SECTION -*/}
                 <div className="follow">
                     <a href="linkedin">
-                        <img src="/linkedin_icon.png" alt="" /> 
+                        <img src="./src/linkedin_icon.png" alt="" /> 
                     </a>
                     <div className="followTextContainer">
                         <div className="followText">FOLLOW ME</div>

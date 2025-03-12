@@ -4,14 +4,14 @@ import { useRef, Suspense } from "react";
 
 // Paths to your 3D models (stored in /public/models)
 const models = [
-  "/threejs.glb",
-  "/python.glb",
-  "/react_logo.glb",
-  "/html_logo.glb",
-  "/github_logo.glb",
-  "/js_logo.glb"
-  
+  "/kristiwebsiteportfolio/threejs.glb",
+  "/kristiwebsiteportfolio/python.glb",
+  "/kristiwebsiteportfolio/react_logo.glb",
+  "/kristiwebsiteportfolio/html_logo.glb",
+  "/kristiwebsiteportfolio/github_logo.glb",
+  "/kristiwebsiteportfolio/js_logo.glb"
 ];
+
 
 // Component to Load and Display a 3D Model
 const ModelComponent = ({ modelPath, scale }) => {

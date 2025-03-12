@@ -8,7 +8,7 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio1.png" alt="Project 1" />
+              <img src="./src/portfolio1.png" alt="Project 1" />
             </div>
             <div className="portfolio-text">
               <h2>Project One</h2>
@@ -26,7 +26,7 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio2.png" alt="Project 2" />
+              <img src="./src/portfolio2.png" alt="Project 2" />
             </div>
             <div className="portfolio-text">
               <h2>Project Two</h2>
@@ -44,7 +44,7 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/myscreen.png" alt="Project 3" />
+              <img src="./src/myscreen.png" alt="Project 3" />
             </div>
             <div className="portfolio-text">
               <h2>Project Three</h2>
@@ -62,7 +62,7 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio4.png" alt="Project 4" />
+              <img src="./src/portfolio4.png" alt="Project 4" />
             </div>
             <div className="portfolio-text">
               <h2>Project Four</h2>
@@ -80,7 +80,7 @@ const Portfolio = () => {
         <section className="section">
           <div className="portfolio-item">
             <div className="portfolio-img">
-              <img src="/portfolio5.png" alt="Project 5" />
+              <img src="./src/portfolio5.png" alt="Project 5" />
             </div>
             <div className="portfolio-text">
               <h2>Project Five</h2>

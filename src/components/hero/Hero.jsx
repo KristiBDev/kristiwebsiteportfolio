@@ -66,7 +66,7 @@ const Hero = () => {
                     duration: 4,
                     ease: "easeInOut"
                 }}
-                href="services"
+                href="#Portfolio"
                 >
                 <svg
                 width="50px"

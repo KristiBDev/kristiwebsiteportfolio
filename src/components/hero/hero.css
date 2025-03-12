@@ -5,8 +5,9 @@
     height: 100vh;
     padding: 50px;
     position: relative;
-    /*background: linear-gradient(to bottom, #3e53ca, #111);*/
     color: white;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 /* Left Section */
@@ -28,7 +29,7 @@
 .hTitle span{
     color: white;
 }
-/* Typing Effect for Subtitle */
+/* Typing Effect Subtitle */
 .motionText {
     font-size: 42px;
     font-weight: normal;
@@ -72,9 +73,9 @@
     pointer-events: auto;
 }
 
-/* Softer Green - Projects Button */
+/* Contact and Projects Button */
 .ProjectsButton {
-    background: linear-gradient(135deg, #F61C24, #be3636); /* Muted green */
+    background: linear-gradient(135deg, #7e080c, #be3636); 
     color: white;
     box-shadow: 0px 3px 8px rgba(158, 57, 27, 0.2);
 }
@@ -84,10 +85,9 @@
     transform: translateY(-2px);
 }
 
-/* Softer Blue - Contact Button */
+/* Softer Blue  Contact Button */
 .contactButton {
-    background: linear-gradient(135deg, #2ba1be, #00a8e8); /* Muted blue */
-    color: white;
+    background: linear-gradient(135deg, #2ba1be, #00a8e8); 
     box-shadow: 0px 3px 8px rgba(70, 119, 211, 0.2);
 }
 
@@ -104,7 +104,7 @@
     height: 100%;
     top: 0;
     left: -100%;
-    background: rgba(255, 255, 255, 0.15); /* Softer shine */
+    background: rgba(255, 255, 255, 0.15); 
     transition: all 0.4s ease-in-out;
 }
 
@@ -164,7 +164,7 @@
     border-bottom-right-radius: 10px;
 }
 
-/* Front Layer - Computer Model */
+/* Front Layer Computer Model */
 .front-layer {
     position: absolute;
     width: 100%;
@@ -181,7 +181,7 @@
 }
 
 
-/* RESPONSIVE */
+/* RESPONSIVE breakpoints*/
 @media (max-width:1536px){
     .hTitle{
         font-size:72px;

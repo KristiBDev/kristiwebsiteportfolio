@@ -31,8 +31,11 @@ const Hero = () => {
                     <Speech />
                 </div>
                 <div className="button-container">
-                    <div className="ProjectsButton">PROJECTS</div>
-                    <div className="contactButton">CONTACT ME</div>
+                <a href="#Portfolio" className="ProjectsButton">
+                PROJECTS
+                </a>
+
+                <a href="#Contact" className="contactButton">CONTACT</a>
                 </div>
 
                 
@@ -42,7 +45,7 @@ const Hero = () => {
             <div className="hSection right">
                 {/* FOLLOW SECTION -*/}
                 <div className="follow">
-                    <a href="linkedin">
+                    <a href="https://www.linkedin.com/in/kristibeka/">
                         <img src="/linkedin_icon.png" alt="" /> 
                     </a>
                     <div className="followTextContainer">

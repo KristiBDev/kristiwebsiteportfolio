@@ -2,7 +2,7 @@
 import { useGLTF } from '@react-three/drei'
 
 export function ComputerModel(props) {
-  const { nodes, materials } = useGLTF('/kristiwebsiteportfolio/computerModel.glb')
+  const { nodes, materials } = useGLTF('/computerModel.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_4.geometry} material={materials['Material.001']} />
@@ -15,4 +15,4 @@ export function ComputerModel(props) {
   )
 }
 
-useGLTF.preload('/kristiwebsiteportfolio/computer.glb')
+useGLTF.preload('/computer.glb')

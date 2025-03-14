@@ -4,12 +4,12 @@ import { useRef, Suspense } from "react";
 
 // Paths to your 3D models (stored in /public/models)
 const models = [
-  "/kristiwebsiteportfolio/threejs.glb",
-  "/kristiwebsiteportfolio/python.glb",
-  "/kristiwebsiteportfolio/react_logo.glb",
-  "/kristiwebsiteportfolio/html_logo.glb",
-  "/kristiwebsiteportfolio/github_logo.glb",
-  "/kristiwebsiteportfolio/js_logo.glb"
+  "/threejs.glb",
+  "/python.glb",
+  "/react_logo.glb",
+  "/html_logo.glb",
+  "/github_logo.glb",
+  "/js_logo.glb"
 ];
 
 

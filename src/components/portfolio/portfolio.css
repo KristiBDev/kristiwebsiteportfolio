@@ -36,7 +36,7 @@
 
 .portfolio-img {
   flex: 1;
-  height: 70%;   /*display: flex;  MAYBE THIS INSTEAD*/
+  display: flex; /*  MAYBE THIS INSTEAD*/
   border-radius: 12px;
   overflow: hidden;
 

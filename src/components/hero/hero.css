@@ -257,9 +257,29 @@
     .hSection.right{
         justify-content: end;
     }
+    .front-layer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        padding: 20vh; /* Add padding */
+        margin-left: 15vh;
+        margin-top: 50vh; /* Ensure it is under the button sections */
+    }
     .front-layer{
-        height: 55vh;
+        height: 35vh; /* Make height smaller */
+        width: 60%; /* Set width to 60% of the screen */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box-shadow for mobile */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Add a border for better visibility */
+        pointer-events: none;
+        transition: border-color 0.3s ease-in-out; /* Add transition for border color */
+    }
+    .front-layer.highlight {
+        border-color: rgba(255, 255, 255, 0.8); /* Highlight border when active */
+    }
+    .side-div {
+        width: 20%; /* Adjust width as needed */
     }
 }
-
-

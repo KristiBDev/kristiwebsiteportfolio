@@ -10,8 +10,31 @@ const awardVariants = {
 };
 
 const Hero = () => {
+    const [highlight, setHighlight] = useState(false);
+
+    const handleHighlight = (e) => {
+        e.stopPropagation();
+        setHighlight(true);
+    };
+
+    const handleDisableHighlight = () => {
+        setHighlight(false);
+    };
+
+    useEffect(() => {
+        if (highlight) {
+            document.addEventListener("click", handleDisableHighlight);
+        } else {
+            document.removeEventListener("click", handleDisableHighlight);
+        }
+
+        return () => {
+            document.removeEventListener("click", handleDisableHighlight);
+        };
+    }, [highlight]);
+
     return (
-        <div className="hero">
+        <div className="hero" onClick={handleDisableHighlight}>
             {/* Background Layer -1 */}
             <div className="hSection left">
                 {/* TITLE */}
@@ -31,15 +54,11 @@ const Hero = () => {
                     <Speech />
                 </div>
                 <div className="button-container">
-                <a href="#Portfolio" className="ProjectsButton">
-                PROJECTS
-                </a>
-
-                <a href="#Contact" className="contactButton">CONTACT</a>
+                    <a href="#Portfolio" className="ProjectsButton">
+                        PROJECTS
+                    </a>
+                    <a href="#Contact" className="contactButton">CONTACT</a>
                 </div>
-
-                
-
             </div>
             
             <div className="hSection right">
@@ -55,13 +74,15 @@ const Hero = () => {
             </div>
 
             {/* Front Layer - Computer Model */}
-            <div className="front-layer">
-                <ComputerModelContainer />
-
+            <div className="front-layer-container" onClick={handleHighlight}>
+                <div className="side-div"></div> {/* Empty div for centering */}
+                <div className={`front-layer ${highlight ? "highlight" : ""}`}>
+                    <ComputerModelContainer />
+                </div>
+                <div className="side-div"></div> {/* Empty div for centering */}
             </div>
             <div className="bottom-section">
-                
-                                            {/*SCROLL SVG */}
+                {/* SCROLL SVG */}
                 <motion.a 
                 animate={{y:[0,5], opacity:[0,1,0]}}
                 transition={{
@@ -97,10 +118,7 @@ const Hero = () => {
                     />
                     </svg>
                 </motion.a>
-                        
-            
             </div>
-
         </div>
     );
 };

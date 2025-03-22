@@ -272,9 +272,10 @@
         height: 35vh; /* Make height smaller */
         width: 60%; /* Set width to 60% of the screen */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box-shadow for mobile */
-        border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Add a border for better visibility */
+        border: 1px solid rgba(255, 255, 255, 0.007); /* Optional: Add a border for better visibility */
         pointer-events: none;
-        transition: border-color 0.3s ease-in-out; /* Add transition for border color */
+        transition: border-color 0.3s ease-in-out; 
+        border-radius: 10px;
     }
     .front-layer.highlight {
         border-color: rgba(255, 255, 255, 0.8); /* Highlight border when active */
